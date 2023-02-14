@@ -1,0 +1,117 @@
+/* Makes the all text centered and the background colour a whitesmoke colour. */
+#app-body {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+/* Makes our navigation links pink and white. */
+.nav-menu-item {
+    background-color: lightcoral;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 8px;
+    margin: 3px 6px;
+}
+
+/* Makes our letter buttons blue and white. */
+.letterButtons {
+    background-color: skyblue;
+    color:white;
+    border: 1px solid skyblue;
+    padding: 3px 10px;
+    border-radius: 8px;
+    margin: 3px 6px;
+}
+
+/* Makes our Generate Word button green and black. */
+.generateButton {
+    background-color: lightgreen;
+    color:black;
+    border: 2px solid black;
+    padding: 3px 10px;
+    border-radius: 8px;
+    margin: 3px 6px;
+}
+
+/* Creates a rounded border around the hangman image. */
+.hangman-img {
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+#outer-div {
+    position: relative;
+    height: 80px;
+    background-color: skyblue;
+    margin-bottom: 30px;
+}
+
+/* Allows us to center our welcome header in the App component vertically and horizontally. */
+#page-header {
+    margin:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#main-heading {
+    color:lightcoral;
+}
+
+.endGameMessage {
+    margin-bottom: 40px;
+}
+
+.uploadFile {
+    padding-left: 70px;
+}
+
+.card-heading {
+    margin-bottom: 25px;
+}
+
+.upload-example {
+    width: 65%;
+}
+
+/*
+
+References:
+
+How to read random line from txt file using JavaScript:
+- https://stackoverflow.com/questions/13392059/grabbing-a-random-line-from-file
+
+How to read from txt file using JavaScript:
+- https://www.geeksforgeeks.org/how-to-read-a-local-text-file-using-javascript/
+
+How to use a callback function:
+- https://www.w3schools.com/js/js_callback.asp
+
+How to get text from inside button using event target in JavaScript:
+- https://stackoverflow.com/questions/61995954/how-do-i-target-the-text-value-of-my-button-using-event
+
+How to center an element vertically and/or horizontally with CSS:
+- https://www.w3schools.com/howto/howto_css_center-vertical.asp
+
+How to use the React Bootstrap grid layout:
+- https://react-bootstrap.github.io/layout/grid/
+
+How to get a character in a string in JavaScript:
+- https://www.w3schools.com/jsref/jsref_charat.asp
+
+How to get the name of an HTML input file:
+- https://stackoverflow.com/questions/857618/javascript-how-to-extract-filename-from-a-file-input-control
+
+How to read a text file in React JS:
+- https://stackoverflow.com/questions/55830414/how-to-read-text-file-in-react
+
+How to use regular expressions in JavaScript:
+- https://www.w3schools.com/js/js_regexp.asp
+- https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+
+*/

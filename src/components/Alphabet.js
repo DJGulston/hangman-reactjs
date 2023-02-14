@@ -1,29 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './css/custom.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-// Letters that will be used to create buttons for the Hangman game.
-const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-                  'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-                  'U', 'V', 'W', 'X', 'Y', 'Z']; 
+/**
+ * Alphabet component that returns a group of buttons labelled from A to Z.
+ * @param {*} props 
+ * @returns 
+ */
+export default function Alphabet(props) {
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App letters={letters} word={""} wordList={[]} uploadedFileName={""} guessedLetters={[]} answeredWord={""} userWins={false} wrongAnswers={0} />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+    /**
+     * Function that calls the clickLetter function letter from  the App component.
+     * @param {*} e 
+     */
+    function clickLetter(e) {
+        props.clickLetter(e);
+    }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    const letters = props.letters;
+
+    // Each letter in the letters array is mapped to a button element.
+    // When any of the buttons are clicked, the clickLetter function from the App
+    // component is called.
+    const letterButtons = letters.map((letter) => 
+        <button key={letter} class="letterButtons" onClick={clickLetter}>{letter}</button>
+    );
+
+    return(
+        <div>
+            {letterButtons}
+        </div>
+    );
+}
 
 /*
 

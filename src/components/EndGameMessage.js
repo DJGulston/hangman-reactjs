@@ -1,29 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './css/custom.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-// Letters that will be used to create buttons for the Hangman game.
-const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-                  'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-                  'U', 'V', 'W', 'X', 'Y', 'Z']; 
+/**
+ * EndGameMessage component that returns either a winning message or a losing
+ * message depending on the user's outcome of the round of Hangman.
+ * @param {*} props 
+ * @returns 
+ */
+export default function EndGameMessage(props) {
+    
+    const userWins = props.userWins;
+    const wrongAnswers = props.wrongAnswers;
+    
+    if(userWins) {
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App letters={letters} word={""} wordList={[]} uploadedFileName={""} guessedLetters={[]} answeredWord={""} userWins={false} wrongAnswers={0} />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+        // If the userWins value is true, then return a victory message. Note that if the
+        // userWins value is false, it doesn't necessarily mean the user has lost the game.
+        // It just means the user hasn't won the game yet.
+        return(
+            <div class="endGameMessage">
+                <h3>Congratulations! You win!</h3>
+            </div>
+        );
+    }
+    else if(wrongAnswers >= 10) {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        // If the number of wrong answers is at least 10, then the user has lost the game
+        // and a defeat message is displayed.
+        return(
+            <div class="endGameMessage">
+                <h3>Tough luck! You lose!</h3>
+            </div>
+        );
+    }
+}
 
 /*
 
