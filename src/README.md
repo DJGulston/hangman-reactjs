@@ -23,11 +23,23 @@ This application was created using ReactJS. In order to use this application, in
 
 If they are downloaded, the version numbers for Node and NPM should be returned by the command line. If the version numbers are not returned, attempt to download Node and NPM again.
 
+Next, we need to install all direct and transitive dependencies for the project. Please ensure that all directories have files have been successfully cloned from the GitHub repository onto your machine before you proceed.
+
+To download all direct and transitive dependencies, open up your command line, navigate to the root directory of the project, and type in the following command:
+
+- 'npm install'
+
+Note that this command will take a while to complete. Once complete, you should notice that the 'node_modules' directory will appear in the root directory. Now, you will be able to start the application.
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 ## How to start the application
 
-To use the application, you need to ensure that the entire project is downloaded. Ensure that all files and directories are downloaded. Once the project is downloaded, open up you command line and navigate the main directory of the project 'my-app'. Once there, type the command 'npm start'. Your browser should open up the project automatically. If your browser does not open the project on its own, then open up your browser and type in 'http://localhost:3000/' in the URL bar. The alternative to typing in 'http://localhost:3000/' is to enter the given IP address shown in your command line into the URL bar in your browser.
+To start this application, open up your command line and navigate to the root directory of the project. Once there, type in the following command:
+
+- 'npm start'
+
+Your browser should open up the project automatically. If your browser does not open the project on its own, then open up your browser and type in 'http://localhost:3000/' in the URL bar. The alternative to typing in 'http://localhost:3000/' is to enter the given IP address shown in your command line into the URL bar in your browser.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
